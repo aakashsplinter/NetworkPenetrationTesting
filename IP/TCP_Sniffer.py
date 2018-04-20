@@ -46,7 +46,7 @@ def StartSniffing():
                 print("Protocol : %s %s -> %s" %(ip_header_tcp.protocol,ip_header_tcp.source_address,ip_header_tcp.destination_address))
 
     except:
-        print("Exiting Program")
+        print("Exiting Program ..  ")
         exit(0)
 
 
