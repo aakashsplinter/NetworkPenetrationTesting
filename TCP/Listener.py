@@ -10,7 +10,7 @@ def ServeClient(ClientToServeSocket,clientIPAddress,portNumber):
 
 def StartServer(portNumber):
     server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    server.bind("0.0.0.0",portNumber)
+    server.bind(("0.0.0.0",portNumber))
     server.listen(10)
     print ("Listening Locally on port %d " %portNumber)
 
@@ -26,3 +26,7 @@ def main():
     args = parser.parse_args()
     portNumber = args.port
     StartServer(portNumber)
+
+
+if __name__ == '__main__':
+    main()
